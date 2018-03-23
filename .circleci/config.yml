@@ -96,7 +96,7 @@ jobs:
       - run:
           name: Run unit tests.
           command: |
-            ls -l node_modules/.bin
+            ls -lL node_modules/.bin
             npm test
       - run:
           name: Submit coverage data to codecov.
@@ -144,7 +144,7 @@ jobs:
       - run:
           name: Run linting.
           command: |
-            ls -l node_modules/.bin
+            ls -lL node_modules/.bin
             npm run lint
           environment:
             NPM_CONFIG_PREFIX: /home/node/.npm-global
@@ -161,7 +161,7 @@ jobs:
       - run:
           name: Build documentation.
           command: |
-            ls -l node_modules/.bin
+            ls -lL node_modules/.bin
             npm run docs
   sample_tests:
     docker:
